@@ -1,0 +1,42 @@
+html, * {
+    font-family: helvetica;
+    box-sizing: border-box;
+  }
+body {
+    height: 100vh;
+    background-color: rgb(252, 100, 77);
+  }
+#grid {
+    display: grid;
+    grid-template-rows: 10vw 30vw 10vw;
+    grid-gap: 1em;
+  }
+#display{
+    height: 400px;
+    width: 700px;
+    background: white;
+    border: 5px solid rgba(100,150,150,.5);
+    border-radius: 10%;
+    padding: 1em;
+  }   
+  #score {
+    background: white;
+    border: 5px solid rgba(100,150,150,.5);
+    border-radius: 10%;
+    height: 100px;
+    width: 200px;
+    padding: 1em;
+
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+  }
+  #bttn {
+    padding: 1em;
+    background: white;
+    border: 5px solid rgba(100,150,150,.5);
+    border-radius: 10%;
+    height: 100px;
+    width: 200px;
+    padding: 1em;
+  }

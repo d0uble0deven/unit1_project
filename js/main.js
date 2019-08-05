@@ -23,8 +23,25 @@ for(var i=0; i < problems.length; i++){
     }
 }
 
+
+if (answer ==== 'input') {
+    add to 'score';
+}
 // render function - show question in div not alert&prompt message
 
 console.log(problems);
 console.log(score);
 console.log(ask);
+
+/* event listener format
+ btn.addEventListener('click', function(evt) {
+   const li = document.createElement('li');
+   const inp = document.querySelector('input');
+   li.textContent = inp.value;
+ });
+  */
+
+
+
+let div = document.querySelector('div');
+    div.style.backgroundColor = 'blanchedAlmond';
