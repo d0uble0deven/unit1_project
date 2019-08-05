@@ -24,9 +24,13 @@ for(var i=0; i < problems.length; i++){
 }
 
 
+//psudeo code
+/*
 if (answer ==== 'input') {
     add to 'score';
 }
+*/
+
 // render function - show question in div not alert&prompt message
 
 console.log(problems);
