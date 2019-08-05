@@ -1,3 +1,4 @@
+/* base */
 html, * {
     font-family: helvetica;
     box-sizing: border-box;
@@ -5,38 +6,72 @@ html, * {
 body {
     height: 100vh;
     background-color: rgb(252, 100, 77);
+    display: flex;
+    flex-direction: column;
   }
-#grid {
-    display: grid;
-    grid-template-rows: 10vw 30vw 10vw;
-    grid-gap: 1em;
+
+
+/* top */
+#top {
+    height: 150px;
+    width: auto;
+  }
+#score {
+    background: whitesmoke;
+    border: 5px solid rgba(100,150,150,.5);
+    border-radius: 10%;
+    height: 100px;
+    width: 200px;
+    padding: 1em;
+    position: absolute;
+    left: 80%;
+  }
+
+  span{
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+/* middle */
+#middle {
+    height: 500px;
+    width: auto;
   }
 #display{
     height: 400px;
     width: 700px;
-    background: white;
+    background: whitesmoke;
     border: 5px solid rgba(100,150,150,.5);
     border-radius: 10%;
     padding: 1em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    left: 20%;
+    right: 20%;
   }   
-  #score {
-    background: white;
-    border: 5px solid rgba(100,150,150,.5);
-    border-radius: 10%;
-    height: 100px;
-    width: 200px;
-    padding: 1em;
 
-    position: relative;
-    bottom: 10px;
-    left: 100px;
+
+
+
+/* bottom */
+#bottom {
+    display: flex;
+    height: 300px;
+    width: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
   }
-  #bttn {
-    padding: 1em;
-    background: white;
-    border: 5px solid rgba(100,150,150,.5);
+button {
+    border: 3px solid rgba(100,150,150,.5);
     border-radius: 10%;
-    height: 100px;
-    width: 200px;
-    padding: 1em;
-  }
+    background: whitesmoke;
+    /* margin: 100px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
