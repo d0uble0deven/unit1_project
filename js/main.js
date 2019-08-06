@@ -1,110 +1,116 @@
 //state
 var problems = [
     {
-    question: "5+5=?\n(A) 3\n(B) 10\n(C) 16",
+    question: "5+5=?\n(A) 10 (B) 3 (C) 16",
     answer: "A"
     },
     {
-    question: "2+2=?\n(A) 8\n(B) 4\n(C) 1",
+    question: "2+2=?\n(A) 8 (B) 4 (C) 1",
     answer: "B"
     },
     {
-    question: "8*9=?\n(A) 86\n(B) 40\n(C) 72",
+    question: "8*9=?\n(A) 86 (B) 40 (C) 72",
+    answer: "C"
+    },
+    {
+    question: "6-2=?\n(A) 6 (B) 40 (C) 4",
     answer: "C"
     }
-]
+];
 
 var questions;
+var prob;
+var rndProb;
+var ans;
+var probSet;
+var score = 0;
 
 // cached elements
 var display = document.getElementById('display');
 var quest = document.getElementById('quest');
-var score = document.getElementById('score');
+var sco = document.getElementById('sco');
 var buttons = document.querySelectorAll('#bttn');
 var bttn1 = document.getElementById('bttn1');
 var bttn2 = document.getElementById('bttn2');
 var bttn3 = document.getElementById('bttn3');
 var valBttn1 = document.querySelector('bttn1.value');
+var valBttn2 = document.querySelector('bttn2.value');
+var valBttn3 = document.querySelector('bttn3.value');
 
 // event listeners
 bttn1.addEventListener('click', function(evt) {
     console.log('button "A" works');    
-//if statements to be in a separat function to check
-    //the function should be called once button is clicked
-        //function should also be called after questioned iteration in render
-for(let i = 0; i <problems.length; i++) {
-    if (bttn1.value === problems[i].answer) {
+    if (bttn1.value === ans) {
     console.log("Yay!!! You're so smart!");
+    score += 10;
+    init();
     } else {
     console.log("You didn't get it :(");
-    }} 
+} 
 });
 
-
-
+bttn2.addEventListener('click', function(evt) {
+    console.log('button "B" works');    
+    if (bttn2.value === ans) {
+    console.log("Yay!!! You're so smart!");
+    score += 10;
+    init();
+    } else {
+    console.log("You didn't get it :(");
+} 
+});
+bttn3.addEventListener('click', function(evt) {
+    console.log('button "C" works');    
+    if (bttn3.value === ans) {
+    console.log("Yay!!! You're so smart!");
+    score += 10;
+    init();
+    } else {
+    console.log("You didn't get it :(");
+} 
+});
 
 // functions
+init();
 
-//iterates through questions NOT WORKING
-for(let i=0; i < problems.length; i++){
-    questions = problems[i].question;
-    
-
-};
-
-console.log(questions);
-
-
-
-/*
-//button clicks check answer and then display message
-document.addEventListener('click', function() {
-//check if clicked button === problems.answer;
-for(let i = 0; i <problems.length; i++) {
-   if(problems[i].answer === buttons); 
+function getRandomProb() {
+    rndProb = Math.floor(Math.random() * problems.length);
+    prob = problems[rndProb].question;
+    ans = problems[rndProb].answer;
+    return prob;
 }
-
-render();
-});
-
-*/
-
-
-/*
-//puts question in display RENDER
-for (let i = 0; i < problems; i++) {
-    var prompt = problems[i].question;
-render()
-}
-*/
-
-
 
 
 function init() {
+    getRandomProb();
     render();
 }
 
 
 function render() {
-    //display question WORKS
-    quest.textContent = questions;
-    // console.log("Yay!!! You're so smart!")
+    if (score === 30) {
+//score cap does not end
+
+ //remove buttons thru dom
+ //put message in quest
+ //add animations
+
+    } else {
+        quest.innerHTML = prob;
+        sco.innerHTML = score;
+    }  
 
 
+  
+}
+
+function yay() {
+    return;
+   // animate
 }
 
 init();
 
-
-
-/* event listener format
- btn.addEventListener('click', function(evt) {
-   const li = document.createElement('li');
-   const inp = document.querySelector('input');
-   li.textContent = inp.value;
- });
-  */
 
 
 /*
