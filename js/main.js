@@ -1,41 +1,101 @@
+//state
 var problems = [
     {
-    question: "5+5=?\n(a) 3\n(b) 10\n(c) 16",
-    answer: "b"
+    question: "5+5=?\n(A) 3\n(B) 10\n(C) 16",
+    answer: "A"
     },
     {
-    question: "2+2=?\n(a) 8\n(b) 4\n(c) 1",
-    answer: "b"
+    question: "2+2=?\n(A) 8\n(B) 4\n(C) 1",
+    answer: "B"
+    },
+    {
+    question: "8*9=?\n(A) 86\n(B) 40\n(C) 72",
+    answer: "C"
     }
 ]
-var score = 0;
 
-for(var i=0; i < problems.length; i++){
-    //iterate through questions and alert user
-    alert(problems[i].question);
-    var ask = window.prompt(problems[i].prompt); 
-    //checks if answer is correct and alerts user
-    if(ask == problems[i].answer){
-        score++;
-        alert("Yay!!! You're so smart!");
+var questions;
+
+// cached elements
+var display = document.getElementById('display');
+var score = document.getElementById('score');
+var buttons = document.querySelectorAll('#bttn');
+var bttn1 = document.getElementById('bttn1');
+var bttn2 = document.getElementById('bttn2');
+var bttn3 = document.getElementById('bttn3');
+
+
+// event listeners
+bttn1.addEventListener('click', function(evt) {
+// for(let i = 0; i <problems.length; i++) {
+// if (problems[i].answer === 'A') {
+        console.log('button "A" works');
+    var bttn1vVal = document.querySelector('#bttn1.value');
+    return bttn1vVal;
+    if (bttn1.value === problems[i].answer) {
+        console.log('correct');
     } else {
-        alert("You didn't get it :(");
+        console.log('incorrect');
     }
+// };
+// };
+});
+
+
+
+
+// functions
+
+//iterates through questions
+for(let i=0; i < problems.length; i++){
+    questions = problems[i].question;
+    
+
+};
+
+console.log(questions);
+
+
+
+/*
+//button clicks check answer and then display message
+document.addEventListener('click', function() {
+//check if clicked button === problems.answer;
+for(let i = 0; i <problems.length; i++) {
+   if(problems[i].answer === buttons); 
 }
 
+render();
+});
 
-//psudeo code
+*/
+
+
 /*
-if (answer ==== 'input') {
-    add to 'score';
+//puts question in display RENDER
+for (let i = 0; i < problems; i++) {
+    var prompt = problems[i].question;
+render()
 }
 */
 
-// render function - show question in div not alert&prompt message
 
-console.log(problems);
-console.log(score);
-console.log(ask);
+
+
+function init() {
+    render();
+}
+
+
+function render() {
+    //display question
+    //
+
+}
+
+init();
+
+
 
 /* event listener format
  btn.addEventListener('click', function(evt) {
@@ -46,6 +106,22 @@ console.log(ask);
   */
 
 
+/*
+    for(var i=0; i < problems.length; i++){
+            //iterate through questions and alert user
+        alert(problems[i].question);
+            //problems[i].question;
 
-let div = document.querySelector('div');
-    div.style.backgroundColor = 'blanchedAlmond';
+        var ask = window.prompt(problems[i].prompt); 
+            //var ask = problems[i].prompt; 
+            //checks if answer is correct and alerts user
+
+        if(ask == problems[i].answer){
+            score++;
+            alert("Yay!!! You're so smart!");
+
+        } else {
+            alert("You didn't get it :(");
+        }
+    }
+*/
