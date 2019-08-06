@@ -18,6 +18,7 @@ var questions;
 
 // cached elements
 var display = document.getElementById('display');
+var quest = document.getElementById('quest');
 var score = document.getElementById('score');
 var buttons = document.querySelectorAll('#bttn');
 var bttn1 = document.getElementById('bttn1');
@@ -46,7 +47,7 @@ bttn1.addEventListener('click', function(evt) {
 
 // functions
 
-//iterates through questions
+//iterates through questions NOT WORKING
 for(let i=0; i < problems.length; i++){
     questions = problems[i].question;
     
@@ -88,8 +89,8 @@ function init() {
 
 
 function render() {
-    //display question
-    //
+    //display question WORKS
+    quest.textContent = questions;
 
 }
 
