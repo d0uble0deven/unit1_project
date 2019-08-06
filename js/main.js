@@ -1,19 +1,19 @@
 //state
 var problems = [
     {
-    question: "5+5=?\n(A) 10 (B) 3 (C) 16",
+    question:"5+5=?" + "<br/>" + "(A) 10 (B) 3 (C) 16",
     answer: "A"
     },
     {
-    question: "2+2=?\n(A) 8 (B) 4 (C) 1",
+    question: "2+2=?" + "<br/>" + "(A) 8 (B) 4 (C) 1",
     answer: "B"
     },
     {
-    question: "8*9=?\n(A) 86 (B) 40 (C) 72",
+    question: "8*9=?" + "<br/>" + "(A) 86 (B) 40 (C) 72",
     answer: "C"
     },
     {
-    question: "6-2=?\n(A) 6 (B) 40 (C) 4",
+    question: "6-2=?" + "<br/>" + "(A) 6 (B) 40 (C) 4",
     answer: "C"
     }
 ];
@@ -30,12 +30,14 @@ var display = document.getElementById('display');
 var quest = document.getElementById('quest');
 var sco = document.getElementById('sco');
 var buttons = document.querySelectorAll('#bttn');
-var bttn1 = document.getElementById('bttn1');
-var bttn2 = document.getElementById('bttn2');
-var bttn3 = document.getElementById('bttn3');
+var bottom = document.querySelector('#bottom');
 var valBttn1 = document.querySelector('bttn1.value');
 var valBttn2 = document.querySelector('bttn2.value');
 var valBttn3 = document.querySelector('bttn3.value');
+var bttn1 = document.getElementById('bttn1');
+var bttn2 = document.getElementById('bttn2');
+var bttn3 = document.getElementById('bttn3');
+
 
 // event listeners
 bttn1.addEventListener('click', function(evt) {
@@ -88,11 +90,14 @@ function init() {
 
 
 function render() {
-    if (score === 30) {
-//score cap does not end
+    if (score === 20) {
+        quest.innerHTML = "You reached 100 points!" + "<br/>" + "You're so smart!!";
+            document.removeEventListener("click", bttn1);
+            document.removeEventListener("click", bttn2);
+            document.removeEventListener("click", bttn3);
 
  //remove buttons thru dom
- //put message in quest
+ //put message in quest DONE!!!!
  //add animations
 
     } else {
