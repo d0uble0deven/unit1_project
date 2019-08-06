@@ -24,22 +24,20 @@ var buttons = document.querySelectorAll('#bttn');
 var bttn1 = document.getElementById('bttn1');
 var bttn2 = document.getElementById('bttn2');
 var bttn3 = document.getElementById('bttn3');
-
+var valBttn1 = document.querySelector('bttn1.value');
 
 // event listeners
 bttn1.addEventListener('click', function(evt) {
-// for(let i = 0; i <problems.length; i++) {
-// if (problems[i].answer === 'A') {
-        console.log('button "A" works');
-    var bttn1vVal = document.querySelector('#bttn1.value');
-    return bttn1vVal;
+    console.log('button "A" works');    
+//if statements to be in a separat function to check
+    //the function should be called once button is clicked
+        //function should also be called after questioned iteration in render
+for(let i = 0; i <problems.length; i++) {
     if (bttn1.value === problems[i].answer) {
-        console.log('correct');
+    console.log("Yay!!! You're so smart!");
     } else {
-        console.log('incorrect');
-    }
-// };
-// };
+    console.log("You didn't get it :(");
+    }} 
 });
 
 
@@ -91,6 +89,8 @@ function init() {
 function render() {
     //display question WORKS
     quest.textContent = questions;
+    // console.log("Yay!!! You're so smart!")
+
 
 }
 
