@@ -74,40 +74,28 @@ var problems = [
     }
 ];
 
-var questions;
 var prob;
 var rndProb;
 var ans;
-var probSet;
 var score = 0;
 const sound = new Audio("audio/yay.wav");
 const mariachi = new Audio("audio/mariachi.wav");
 
 // cached elements
-var display = document.getElementById('display');
 var quest = document.getElementById('quest');
 var sco = document.getElementById('sco');
-var buttons = document.querySelectorAll('#bttn');
-var bottom = document.querySelector('#bottom');
-var valBttn1 = document.querySelector('bttn1.value');
-var valBttn2 = document.querySelector('bttn2.value');
-var valBttn3 = document.querySelector('bttn3.value');
 var bttn1 = document.getElementById('bttn1');
 var bttn2 = document.getElementById('bttn2');
 var bttn3 = document.getElementById('bttn3');
-var body = document.querySelector('body');
 
 
 // event listeners
-
-
 bttn1.addEventListener('click', function(evt) {
     console.log('button "A" works');    
     if (bttn1.value === ans) {
     console.log("Yay!!! You're so smart!");
     score += 100;
     sound.play();
-    sco.classList.add('magictime', 'puffIn');
     init();
     } else {
     bttn1.classList.add("gone");
@@ -123,7 +111,6 @@ bttn2.addEventListener('click', function(evt) {
     console.log("Yay!!! You're so smart!");
     score += 100;
     sound.play();
-    sco.classList.add('magictime', 'puffIn');
     init();
     } else {
     bttn2.classList.add("gone");
@@ -139,7 +126,6 @@ bttn3.addEventListener('click', function(evt) {
     console.log("Yay!!! You're so smart!");
     score += 100;
     sound.play();
-    sco.classList.add('magictime', 'puffIn');
     init();
     } else {
     bttn3.classList.add("gone");
@@ -180,7 +166,6 @@ function render() {
         //if you get answer correct
         quest.innerHTML = prob;
         sco.innerHTML = score;
-        sco.classList.add('magictime', 'puffIn');
         bttn1.classList.remove("gone");
         bttn2.classList.remove("gone");
         bttn3.classList.remove("gone");
