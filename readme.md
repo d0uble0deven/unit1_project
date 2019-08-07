@@ -1,4 +1,4 @@
-#Math for Kids Game#
+#Math for Kids#
 
 ###Screenshot(s):###
 

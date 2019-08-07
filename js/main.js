@@ -80,6 +80,8 @@ var rndProb;
 var ans;
 var probSet;
 var score = 0;
+const sound = new Audio("audio/yay.wav");
+const mariachi = new Audio("audio/mariachi.wav");
 
 // cached elements
 var display = document.getElementById('display');
@@ -103,9 +105,12 @@ bttn1.addEventListener('click', function(evt) {
     console.log('button "A" works');    
     if (bttn1.value === ans) {
     console.log("Yay!!! You're so smart!");
-    score += 10;
+    score += 100;
+    sound.play();
+    sco.classList.add('magictime', 'puffIn');
     init();
     } else {
+    bttn1.classList.add("gone");
     console.log("You didn't get it :(");
 } 
 });
@@ -116,9 +121,12 @@ bttn2.addEventListener('click', function(evt) {
     console.log('button "B" works');    
     if (bttn2.value === ans) {
     console.log("Yay!!! You're so smart!");
-    score += 10;
+    score += 100;
+    sound.play();
+    sco.classList.add('magictime', 'puffIn');
     init();
     } else {
+    bttn2.classList.add("gone");
     console.log("You didn't get it :(");
 } 
 });
@@ -129,9 +137,12 @@ bttn3.addEventListener('click', function(evt) {
     console.log('button "C" works');    
     if (bttn3.value === ans) {
     console.log("Yay!!! You're so smart!");
-    score += 10;
+    score += 100;
+    sound.play();
+    sco.classList.add('magictime', 'puffIn');
     init();
     } else {
+    bttn3.classList.add("gone");
     console.log("You didn't get it :(");
 } 
 });
@@ -142,6 +153,7 @@ bttn3.addEventListener('click', function(evt) {
 init();
 
 function getRandomProb() {
+    //chooses random question
     rndProb = Math.floor(Math.random() * problems.length);
     prob = problems[rndProb].question;
     ans = problems[rndProb].answer;
@@ -149,39 +161,30 @@ function getRandomProb() {
 }
 
 function init() {
+    //generates question and renders game logic
     getRandomProb();
     render();
 }
 
 function render() {
-    if (score === 100) {
-        quest.innerHTML = "You reached 100 points!" + "<br/>" + "You're so smart!!";
-        sco.innerHTML = 100;
+    if (score === 1000) {
+        //if user win game
+        quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
+        sco.innerHTML = 1000;
+        bttn1.removeAttribute("bttn1");
+        bttn2.removeAttribute("bttn2");
+        bttn3.removeAttribute("bttn3");
+        mariachi.play();
         confetti.start();
     } else {
+        //if you get answer correct
         quest.innerHTML = prob;
         sco.innerHTML = score;
+        sco.classList.add('magictime', 'puffIn');
+        bttn1.classList.remove("gone");
+        bttn2.classList.remove("gone");
+        bttn3.classList.remove("gone");
     }  
 }
 
 init();
-
-/*
-    for(var i=0; i < problems.length; i++){
-            //iterate through questions and alert user
-        alert(problems[i].question);
-            //problems[i].question;
-
-        var ask = window.prompt(problems[i].prompt); 
-            //var ask = problems[i].prompt; 
-            //checks if answer is correct and alerts user
-
-        if(ask == problems[i].answer){
-            score++;
-            alert("Yay!!! You're so smart!");
-
-        } else {
-            alert("You didn't get it :(");
-        }
-    }
-*/
