@@ -37,9 +37,50 @@ var valBttn3 = document.querySelector('bttn3.value');
 var bttn1 = document.getElementById('bttn1');
 var bttn2 = document.getElementById('bttn2');
 var bttn3 = document.getElementById('bttn3');
+var body = document.querySelector('body');
 
 
 // event listeners
+/*
+bttn1.addEventListener('click', b1);
+
+var b1 = function() {
+    console.log('button "A" works');    
+    if (bttn1.value === ans) {
+    console.log("Yay!!! You're so smart!");
+    score += 10;
+    init();
+    } else {
+    console.log("You didn't get it :(");
+}
+
+bttn2.addEventListener('click', b2);
+
+var b2 = function() {
+    console.log('button "B" works');    
+    if (bttn2.value === ans) {
+    console.log("Yay!!! You're so smart!");
+    score += 10;
+    init();
+    } else {
+    console.log("You didn't get it :(");
+}
+
+bttn3.addEventListener('click', b3);
+
+var b3 = function() {
+    console.log('button "C" works');    
+    if (bttn3.value === ans) {
+    console.log("Yay!!! You're so smart!");
+    score += 10;
+    init();
+    } else {
+    console.log("You didn't get it :(");
+}
+*/
+
+
+
 bttn1.addEventListener('click', function(evt) {
     console.log('button "A" works');    
     if (bttn1.value === ans) {
@@ -51,6 +92,8 @@ bttn1.addEventListener('click', function(evt) {
 } 
 });
 
+
+
 bttn2.addEventListener('click', function(evt) {
     console.log('button "B" works');    
     if (bttn2.value === ans) {
@@ -61,6 +104,9 @@ bttn2.addEventListener('click', function(evt) {
     console.log("You didn't get it :(");
 } 
 });
+
+
+
 bttn3.addEventListener('click', function(evt) {
     console.log('button "C" works');    
     if (bttn3.value === ans) {
@@ -72,6 +118,8 @@ bttn3.addEventListener('click', function(evt) {
 } 
 });
 
+
+
 // functions
 init();
 
@@ -82,41 +130,23 @@ function getRandomProb() {
     return prob;
 }
 
-
 function init() {
     getRandomProb();
     render();
 }
 
-
 function render() {
     if (score === 20) {
         quest.innerHTML = "You reached 100 points!" + "<br/>" + "You're so smart!!";
-            document.removeEventListener("click", bttn1);
-            document.removeEventListener("click", bttn2);
-            document.removeEventListener("click", bttn3);
-
- //remove buttons thru dom
- //put message in quest DONE!!!!
- //add animations
-
+        sco.innerHTML = 100;
+        confetti.start();
     } else {
         quest.innerHTML = prob;
         sco.innerHTML = score;
     }  
-
-
-  
-}
-
-function yay() {
-    return;
-   // animate
 }
 
 init();
-
-
 
 /*
     for(var i=0; i < problems.length; i++){
