@@ -91,45 +91,36 @@ var bttn3 = document.getElementById('bttn3');
 
 // event listeners
 bttn1.addEventListener('click', function(evt) {
-    console.log('button "A" works');    
     if (bttn1.value === ans) {
-    console.log("Yay!!! You're so smart!");
     score += 100;
     sound.play();
     init();
     } else {
     bttn1.classList.add("gone");
-    console.log("You didn't get it :(");
 } 
 });
 
 
 
-bttn2.addEventListener('click', function(evt) {
-    console.log('button "B" works');    
+bttn2.addEventListener('click', function(evt) {  
     if (bttn2.value === ans) {
-    console.log("Yay!!! You're so smart!");
     score += 100;
     sound.play();
     init();
     } else {
     bttn2.classList.add("gone");
-    console.log("You didn't get it :(");
 } 
 });
 
 
 
-bttn3.addEventListener('click', function(evt) {
-    console.log('button "C" works');    
+bttn3.addEventListener('click', function(evt) {   
     if (bttn3.value === ans) {
-    console.log("Yay!!! You're so smart!");
     score += 100;
     sound.play();
     init();
     } else {
     bttn3.classList.add("gone");
-    console.log("You didn't get it :(");
 } 
 });
 
@@ -154,7 +145,7 @@ function init() {
 
 function render() {
     if (score === 1000) {
-        //if user win game
+        //if user wins game
         quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
         sco.innerHTML = 1000;
         bttn1.removeAttribute("bttn1");
@@ -163,7 +154,7 @@ function render() {
         mariachi.play();
         confetti.start();
     } else {
-        //if you get answer correct
+        //if you gets answer correct
         quest.innerHTML = prob;
         sco.innerHTML = score;
         bttn1.classList.remove("gone");
