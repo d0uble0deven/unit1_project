@@ -1,4 +1,4 @@
-//state
+//variables
 var problems = [
     {
     question:"5 + 5 = ?" + "<br/>" + "a) 10 " + " b) 3 " + " c) 16",
@@ -100,8 +100,6 @@ bttn1.addEventListener('click', function(evt) {
 } 
 });
 
-
-
 bttn2.addEventListener('click', function(evt) {  
     if (bttn2.value === ans) {
     score += 100;
@@ -112,8 +110,6 @@ bttn2.addEventListener('click', function(evt) {
 } 
 });
 
-
-
 bttn3.addEventListener('click', function(evt) {   
     if (bttn3.value === ans) {
     score += 100;
@@ -123,7 +119,6 @@ bttn3.addEventListener('click', function(evt) {
     bttn3.classList.add("gone");
 } 
 });
-
 
 
 // functions
@@ -148,9 +143,6 @@ function render() {
         //if user wins game
         quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
         sco.innerHTML = 1000;
-        bttn1.removeAttribute("bttn1");
-        bttn2.removeAttribute("bttn2");
-        bttn3.removeAttribute("bttn3");
         mariachi.play();
         confetti.start();
     } else {
