@@ -16,3 +16,6 @@ As a user I want to receive positive feedback to encourage me to learn my math s
 
 ###Stretch Goals:
 Add a feature where mutiple equations appear and user must solve them as quickly as possible. Add a timer for the math equations. Put multiple choice options in the buttons themselves. 
+
+
+Deploymed Site: http://kids_game.surge.sh/
