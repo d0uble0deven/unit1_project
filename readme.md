@@ -1,4 +1,4 @@
-# Math for Kids
+# Math Game for Kids
 
 ### Objective
 This game is intended to educate young children in  basic mathematics through positive reinforcement. 
