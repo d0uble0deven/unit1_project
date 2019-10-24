@@ -36,4 +36,4 @@ As a user I want to learn through repitition.
 - Randomize equations through template literals and advanced game logic.
 
 
-Deploymed Site: http://kids_game.surge.sh/
+Deployed Site: http://kids_game.surge.sh/
