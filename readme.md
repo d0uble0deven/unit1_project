@@ -8,6 +8,7 @@ This game is intended to educate young children in  basic mathematics through po
 
 ### Screenshot:
 
+![screenshot](mdk_screenshot.png)
 
 
 ### Technologies Used:
