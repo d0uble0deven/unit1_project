@@ -25,11 +25,15 @@ If the user answers incorrectly, the button that corresponds to the incorrect an
 Once the user correctly answers ten questions, the user is treated to confetti and cheerful mariachi music. The user must reload the page to start a new game.
 
 ### User Stories:
-As a user I want second chances on incorrect answers to improve my math skills.
-As a user I want to receive positive feedback to encourage me to learn my math skills.
+As a user I want to learn basic math operations in a positive environment.
+As a user I want second chances to answer questions.
+As a user I want to learn through repitition.
 
 ### Stretch Goals:
-Add a feature where mutiple equations appear and user must solve them as quickly as possible. Add a timer for the math equations. Put multiple choice options in the buttons themselves. 
+- Add a feature where mutiple equations appear and user must solve them as quickly as possible. 
+- Add a timer for the math equations. 
+- Put multiple choice options in the buttons themselves. 
+- Randomize equations through template literals and advanced game logic.
 
 
 Deploymed Site: http://kids_game.surge.sh/
