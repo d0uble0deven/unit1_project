@@ -1,6 +1,6 @@
 /* base */
 html, * {
-    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Love Ya Like A Sister', cursive, 'Mountains of Christmas', cursive;
     box-sizing: border-box;
     color: rgba(100,150,150,.9);
     font-size: 140%;
@@ -18,7 +18,7 @@ body {
     width: auto;
   }
 #score {
-    background: whitesmoke;
+    background: white;
     border: 5px solid rgba(100,150,150,.5);
     border-radius: 5%;
     height: 100px;
@@ -41,7 +41,7 @@ body {
 }
 
 #score:hover {
-  background: whitesmoke;
+  background: white;
   border: 5px solid rgba(100,150,150,.7);
   border-radius: 6%;
   color: rgba(130,180,180,.9);
@@ -57,7 +57,7 @@ body {
 #display{
     height: 400px;
     width: 50%;
-    background: whitesmoke;
+    background: white;
     border: 5px solid rgba(100,150,150,.5);
     border-radius: 5%;
     justify-content: space-evenly;
@@ -76,7 +76,7 @@ body {
   }
 
   #display:hover {
-    background: whitesmoke;
+    background: white;
     border: 5px solid rgba(100,150,150,.7);
     border-radius: 6%;
     color: rgba(130,180,180,.9);
@@ -96,7 +96,7 @@ body {
 button {
     border: 3px solid rgba(100,150,150,.5);
     border-radius: 5%;
-    background: whitesmoke;
+    background: white;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 100px;
