@@ -142,21 +142,27 @@ function init() {
     render();
 }
 
+//if user wins game
 function userWins() {
-    //if user wins game
+    // displays victory message
     quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
+    // sets score to 1000
     sco.innerHTML = 1000;
+    // plays victory music
     mariachi.play();
     confetti.start();
+    // removes buttons
     bttn1.classList.add("gone");
     bttn2.classList.add("gone");
     bttn3.classList.add("gone");
 }
 
+// if you gets answer correct
 function userCorrect() {
-    //if you gets answer correct
+    // updates questions, answer, and score
     quest.innerHTML = prob;
     sco.innerHTML = score;
+    // adds buttons
     bttn1.classList.remove("gone");
     bttn2.classList.remove("gone");
     bttn3.classList.remove("gone");
