@@ -142,20 +142,32 @@ function init() {
     render();
 }
 
+function userWins() {
+    //if user wins game
+    quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
+    sco.innerHTML = 1000;
+    mariachi.play();
+    confetti.start();
+    bttn1.classList.add("gone");
+    bttn2.classList.add("gone");
+    bttn3.classList.add("gone");
+}
+
+function userCorrect() {
+    //if you gets answer correct
+    quest.innerHTML = prob;
+    sco.innerHTML = score;
+    bttn1.classList.remove("gone");
+    bttn2.classList.remove("gone");
+    bttn3.classList.remove("gone");
+
+}
+
 function render() {
-    if (score === 1000) {
-        //if user wins game
-        quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
-        sco.innerHTML = 1000;
-        mariachi.play();
-        confetti.start();
+    if (score >= 1000) {
+        userWins()
     } else {
-        //if you gets answer correct
-        quest.innerHTML = prob;
-        sco.innerHTML = score;
-        bttn1.classList.remove("gone");
-        bttn2.classList.remove("gone");
-        bttn3.classList.remove("gone");
+        userCorrect()
     }
 }
 
