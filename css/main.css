@@ -122,3 +122,32 @@ button:hover {
 .gone {
   display: none;
 }
+
+
+/* iPad size */
+@media all and (max-width: 768px) and (min-width: 375px){
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* middle section */
+  #middle {
+    height: 60%;
+    width: auto;
+  }
+ #display{
+  /* font-size: 60%; */
+  height: 60%;
+  /* width: 60%; */
+  }
+  #quest{
+    font-size: 60%;
+  }
+
+
+  /* bottm buttons */
+ 
+  
+}
