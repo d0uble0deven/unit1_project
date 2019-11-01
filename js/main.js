@@ -144,60 +144,41 @@ function init() {
 
 
 
-function render() {
-    if (score === 1000) {
-        //if user wins game
-        quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
-        sco.innerHTML = 1000;
-        mariachi.play();
-        confetti.start();
-    } else {
-        //if you gets answer correct
-        quest.innerHTML = prob;
-        sco.innerHTML = score;
-        bttn1.classList.remove("gone");
-        bttn2.classList.remove("gone");
-        bttn3.classList.remove("gone");
-    }
+//if user wins game
+function userWins() {
+    // displays victory message
+    quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
+    // sets score to 1000
+    sco.innerHTML = 1000;
+    // plays victory music
+    mariachi.play();
+    confetti.start();
+    // removes buttons
+    bttn1.classList.add("gone");
+    bttn2.classList.add("gone");
+    bttn3.classList.add("gone");
 }
 
-// //if user wins game
-// function userWins() {
-//     // displays victory message
-//     quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
-//     // sets score to 1000
-//     sco.innerHTML = 1000;
-//     // plays victory music
-//     mariachi.play();
-//     confetti.start();
-//     // removes buttons
-//     bttn1.classList.add("gone");
-//     bttn2.classList.add("gone");
-//     bttn3.classList.add("gone");
-// }
+// if you gets answer correct
+function userCorrect() {
+    // updates questions, answer, and score
+    quest.innerHTML = prob;
+    sco.innerHTML = score;
 
-// // if you gets answer correct
-// function userCorrect() {
-//     // updates questions, answer, and score
-//     quest.innerHTML = prob;
-//     console.log(quest.innerHTML)
-//     sco.innerHTML = score;
-//     console.log(sco.innerHTML)
+    // adds buttons
+    bttn1.classList.remove("gone");
+    bttn2.classList.remove("gone");
+    bttn3.classList.remove("gone");
+    getRandomProb();
 
-//     // adds buttons
-//     bttn1.classList.remove("gone");
-//     bttn2.classList.remove("gone");
-//     bttn3.classList.remove("gone");
-//     getRandomProb();
+}
 
-// }
-
-// function render() {
-//     if (score >= 1000) {
-//         userWins()
-//     } else {
-//         userCorrect()
-//     }
-// }
+function render() {
+    if (score >= 1000) {
+        userWins()
+    } else {
+        userCorrect()
+    }
+}
 
 init();
