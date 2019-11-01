@@ -1,75 +1,75 @@
 //variables
 var problems = [
     {
-        question: "5 + 5 = ?" + "<br/>" + "<br/>" + "a) 10 &nbsp;&nbsp;             b) 3    &nbsp;&nbsp;       c) 16",
+        question: "5 + 5 = ?" + "<br/>" + "<br/>" + "a) 10 &nbsp;&nbsp; b) 3 &nbsp;&nbsp; c) 16",
         answer: "a"
     },
     {
-        question: "2 + 2 = ?" + "<br/>" + "a) 8 " + " b) 4 " + " c) 1",
+        question: "2 + 2 = ?" + "<br/>" + "<br/>" + "a) 8 &nbsp;&nbsp; b) 4 &nbsp;&nbsp; c) 1",
         answer: "b"
     },
     {
-        question: "8 x 9 = ?" + "<br/>" + "a) 86 " + " b) 40 " + " c) 72",
+        question: "8 x 9 = ?" + "<br/>" + "<br/>" + "a) 86 &nbsp;&nbsp; b) 40 &nbsp;&nbsp; c) 72",
         answer: "c"
     },
     {
-        question: "6 - 2 = ?" + "<br/>" + "a) 6 " + " b) 40 " + " c) 4",
+        question: "6 - 2 = ?" + "<br/>" + "<br/>" + "a) 6 &nbsp;&nbsp; b) 40 &nbsp;&nbsp; c) 4",
         answer: "c"
     },
     {
-        question: "9 / 3 = ?" + "<br/>" + "a) 3 " + " b) 40 " + " c) 4",
+        question: "9 / 3 = ?" + "<br/>" + "<br/>" + "a) 3 &nbsp;&nbsp; b) 40 &nbsp;&nbsp; c) 4",
         answer: "a"
     },
     {
-        question: "7 x 8 = ?" + "<br/>" + "a) 56 " + " b) 42 " + " c) 1",
+        question: "7 x 8 = ?" + "<br/>" + "<br/>" + "a) 56 &nbsp;&nbsp; b) 42 &nbsp;&nbsp; c) 1",
         answer: "a"
     },
     {
-        question: "4 + 16 = ?" + "<br/>" + "a) 6 " + " b) 20 " + " c) 4",
+        question: "4 + 16 = ?" + "<br/>" + "<br/>" + "a) 6 &nbsp;&nbsp; b) 20 &nbsp;&nbsp; c) 4",
         answer: "b"
     },
     {
-        question: "19 - 7 = ?" + "<br/>" + "a) 62 " + " b) 9 " + " c) 12",
+        question: "19 - 7 = ?" + "<br/>" + "<br/>" + "a) 62 &nbsp;&nbsp; b) 9 &nbsp;&nbsp; c) 12",
         answer: "c"
     },
     {
-        question: "60 - 2 = ?" + "<br/>" + "a) 58 " + " b) 2 " + " c) 14",
+        question: "60 - 2 = ?" + "<br/>" + "<br/>" + "a) 58 &nbsp;&nbsp; b) 2 &nbsp;&nbsp; c) 14",
         answer: "a"
     },
     {
-        question: "50 + 50 = ?" + "<br/>" + "a) 100 " + " b) 13 " + " c) 76",
+        question: "50 + 50 = ?" + "<br/>" + "<br/>" + "a) 100 &nbsp;&nbsp; b) 13 &nbsp;&nbsp; c) 76",
         answer: "a"
     },
     {
-        question: "29 + 23 = ?" + "<br/>" + "a) 82 " + " b) 52 " + " c) 59",
+        question: "29 + 23 = ?" + "<br/>" + "<br/>" + "a) 82 &nbsp;&nbsp; b) 52 &nbsp;&nbsp; c) 59",
         answer: "b"
     },
     {
-        question: "1 x 7 = ?" + "<br/>" + "a) 7 " + " b) 17 " + " c) 71",
+        question: "1 x 7 = ?" + "<br/>" + "<br/>" + "a) 7 &nbsp;&nbsp; b) 17 &nbsp;&nbsp; c) 71",
         answer: "a"
     },
     {
-        question: "2 - 2 = ?" + "<br/>" + "a) 80 " + " b) 2 " + " c) 0",
+        question: "2 - 2 = ?" + "<br/>" + "<br/>" + "a) 80 &nbsp;&nbsp; b) 2 &nbsp;&nbsp; c) 0",
         answer: "c"
     },
     {
-        question: "12 / 6 = ?" + "<br/>" + "a) 2 " + " b) 7 " + " c) 11",
+        question: "12 / 6 = ?" + "<br/>" + "<br/>" + "a) 2 &nbsp;&nbsp; b) 7 &nbsp;&nbsp; c) 11",
         answer: "a"
     },
     {
-        question: "4 x 4 = ?" + "<br/>" + "a) 5 " + " b) 2 " + " c) 16",
+        question: "4 x 4 = ?" + "<br/>" + "<br/>" + "a) 5 &nbsp;&nbsp; b) 2 &nbsp;&nbsp; c) 16",
         answer: "c"
     },
     {
-        question: "41 + 16 = ?" + "<br/>" + "a) 57 " + " b) 28 " + " c) 41",
+        question: "41 + 16 = ?" + "<br/>" + "<br/>" + "a) 57 &nbsp;&nbsp; b) 28 &nbsp;&nbsp; c) 41",
         answer: "a"
     },
     {
-        question: "59 - 17 = ?" + "<br/>" + "a) 42 " + " b) 91 " + " c) 22",
+        question: "59 - 17 = ?" + "<br/>" + "<br/>" + "a) 42 &nbsp;&nbsp; b) 91 &nbsp;&nbsp; c) 22",
         answer: "a"
     },
     {
-        question: "6 - 5 = ?" + "<br/>" + "a) 8 " + " b) 23 " + " c) 1",
+        question: "6 - 5 = ?" + "<br/>" + "<br/>" + "a) 8 &nbsp;&nbsp; b) 23 &nbsp;&nbsp; c) 1",
         answer: "c"
     }
 ]
