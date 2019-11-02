@@ -74,6 +74,10 @@ body {
   #quest{
     font-size: 100%;
   }
+  #ac{
+    font-size: 100%;
+  }
+
 
   #display:hover {
     background: white;
@@ -126,7 +130,7 @@ button:hover {
 
 
 /* iPad size */
-@media all and (max-width: 1024) and (min-width: 768px){
+@media all and (max-width: 1024) and (min-width: 768px) {
   body {
     height: 100vh;
     display: flex;
@@ -148,7 +152,7 @@ button:hover {
   }
 
 
-  /* bott0m buttons */
+  /* bottom buttons */
  
   
 }
