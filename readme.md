@@ -36,4 +36,4 @@ As a user I want to learn through repitition.
 - Put multiple choice options in the buttons themselves.
 - Randomize equations through template literals and advanced game logic.
 
-[//] # (Deployed Site: http://kids_game.surge.sh/)
+
