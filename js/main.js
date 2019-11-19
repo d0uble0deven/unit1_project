@@ -89,14 +89,12 @@ var bttn2 = document.getElementById('bttn2');
 var bttn3 = document.getElementById('bttn3');
 
 // event listeners
-bttn1.addEventListener('click', checkAnswer1)
-bttn2.addEventListener('click', checkAnswer2)
-bttn3.addEventListener('click', checkAnswer3)
+// bttn1.addEventListener('click', checkAnswer1)
+// bttn2.addEventListener('click', checkAnswer2)
+// bttn3.addEventListener('click', checkAnswer3)
 
-// functions
-init();
 
-function checkAnswer1(evt) {
+bttn1.addEventListener('click', function (evt) {
     if (bttn1.value === ans) {
         score += 100;
         sound.play();
@@ -104,9 +102,9 @@ function checkAnswer1(evt) {
     } else {
         bttn1.classList.add("gone");
     }
-}
+});
 
-function checkAnswer2(evt) {
+bttn2.addEventListener('click', function (evt) {
     if (bttn2.value === ans) {
         score += 100;
         sound.play();
@@ -114,9 +112,9 @@ function checkAnswer2(evt) {
     } else {
         bttn2.classList.add("gone");
     }
-}
+});
 
-function checkAnswer3(evt) {
+bttn3.addEventListener('click', function (evt) {
     if (bttn3.value === ans) {
         score += 100;
         sound.play();
@@ -124,7 +122,41 @@ function checkAnswer3(evt) {
     } else {
         bttn3.classList.add("gone");
     }
-}
+});
+
+// functions
+init();
+
+// function checkAnswer1(evt) {
+//     if (bttn1.value === ans) {
+//         score += 100;
+//         sound.play();
+//         init();
+//     }
+//     else {
+//         // bttn1.classList.add("gone");
+//     }
+// }
+
+// function checkAnswer2(evt) {
+//     if (bttn2.value === ans) {
+//         score += 100;
+//         sound.play();
+//         init();
+//     } else {
+//         // bttn2.classList.add("gone");
+//     }
+// }
+
+// function checkAnswer3(evt) {
+//     if (bttn3.value === ans) {
+//         score += 100;
+//         sound.play();
+//         init();
+//     } else {
+//         // bttn3.classList.add("gone");
+//     }
+// }
 
 function getRandomProb() {
     //chooses random question
@@ -146,39 +178,61 @@ function init() {
 
 
 //if user wins game
-function userWins() {
-    // displays victory message
-    quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
-    // sets score to 1000
-    sco.innerHTML = 1000;
-    // plays victory music
-    mariachi.play();
-    confetti.start();
-    // removes buttons
-    bttn1.classList.add("gone");
-    bttn2.classList.add("gone");
-    bttn3.classList.add("gone");
-}
+// function userWins() {
+//     // displays victory message
+//     quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
+//     // sets score to 1000
+//     sco.innerHTML = 1000;
+//     // plays victory music
+//     mariachi.play();
+//     confetti.start();
+//     bttn1.removeAttribute("bttn1");
+//     bttn2.removeAttribute("bttn2");
+//     bttn3.removeAttribute("bttn3");
+//     // removes buttons
+//     // bttn1.classList.add("gone");
+//     // bttn2.classList.add("gone");
+//     // bttn3.classList.add("gone");
+// }
 
-// if you gets answer correct
-function userCorrect() {
-    // updates questions, answer, and score
-    quest.innerHTML = prob;
-    sco.innerHTML = score;
+// // if you gets answer correct
+// function userCorrect() {
+//     // updates questions, answer, and score
+//     quest.innerHTML = prob;
+//     sco.innerHTML = score;
+//     // adds buttons
+//     bttn1.classList.remove("gone");
+//     bttn2.classList.remove("gone");
+//     bttn3.classList.remove("gone");
+//     getRandomProb();
 
-    // adds buttons
-    bttn1.classList.remove("gone");
-    bttn2.classList.remove("gone");
-    bttn3.classList.remove("gone");
-    getRandomProb();
+// }
 
-}
-
+// function render() {
+//     if (score >= 1000) {
+//         userWins()
+//     } else {
+//         userCorrect()
+//     }
+// }
 function render() {
-    if (score >= 1000) {
-        userWins()
+    //if user wins game
+    if (score === 1000) {
+        //if user wins game
+        quest.innerHTML = "You reached 1000 points!" + "<br/>" + "You're so smart!!";
+        sco.innerHTML = 1000;
+        bttn1.removeAttribute("bttn1");
+        bttn2.removeAttribute("bttn2");
+        bttn3.removeAttribute("bttn3");
+        mariachi.play();
+        confetti.start();
     } else {
-        userCorrect()
+        //if you gets answer correct
+        quest.innerHTML = prob;
+        sco.innerHTML = score;
+        bttn1.classList.remove("gone");
+        bttn2.classList.remove("gone");
+        bttn3.classList.remove("gone");
     }
 }
 
